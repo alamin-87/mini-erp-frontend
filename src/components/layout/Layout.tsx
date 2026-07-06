@@ -122,7 +122,7 @@ export default function Layout() {
             </div>
             <button
               onClick={handleLogout}
-              className="rounded-full bg-destructive/10 text-destructive hover:bg-destructive hover:text-destructive-foreground px-5 py-2.5 text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 active:scale-95"
+              className="rounded-full bg-destructive/10 text-destructive hover:bg-destructive hover:text-white px-5 py-2.5 text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105 active:scale-95"
             >
               Logout
             </button>

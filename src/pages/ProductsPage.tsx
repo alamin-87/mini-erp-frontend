@@ -118,10 +118,11 @@ export default function ProductsPage() {
       } else {
         await productApi.create(payload);
         setMessage("Product created successfully.");
+        setPage(1);
       }
 
       resetForm();
-      queryClient.invalidateQueries({ queryKey: ["products"] });
+      await queryClient.invalidateQueries({ queryKey: ["products"] });
     } catch {
       setMessage(editingId ? "Unable to update the product." : "Unable to create the product.");
     } finally {
@@ -133,7 +134,7 @@ export default function ProductsPage() {
     if(confirm("Are you sure you want to delete this product?")) {
       try {
         await productApi.remove(id);
-        queryClient.invalidateQueries({ queryKey: ["products"] });
+        await queryClient.invalidateQueries({ queryKey: ["products"] });
       } catch {
         setMessage("Unable to delete the product.");
       }
