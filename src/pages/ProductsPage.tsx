@@ -4,7 +4,7 @@ import { productApi, getStoredUser } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { getRolePermissions } from "@/lib/permissions";
 import type { Product } from "@/types/app";
-import { Package, Search, Plus, Edit2, Trash2, Image as ImageIcon, CheckCircle2 } from "lucide-react";
+import { Package, Search, Plus, Edit2, Trash2, Image as ImageIcon, CheckCircle2, AlertTriangle } from "lucide-react";
 import gsap from "gsap";
 
 export default function ProductsPage() {

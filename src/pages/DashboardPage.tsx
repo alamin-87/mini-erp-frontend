@@ -5,7 +5,7 @@ import { dashboardApi, productApi, getStoredUser } from "@/lib/api";
 import { getRolePermissions } from "@/lib/permissions";
 import type { DashboardStats, Product } from "@/types/app";
 import gsap from "gsap";
-import { Package, TrendingUp, AlertTriangle, ArrowRight, DollarSign, Activity } from "lucide-react";
+import { Package, AlertTriangle, ArrowRight, DollarSign, Activity } from "lucide-react";
 
 export default function DashboardPage() {
   const user = getStoredUser();
