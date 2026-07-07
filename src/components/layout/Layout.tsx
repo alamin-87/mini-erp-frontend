@@ -21,7 +21,6 @@ export default function Layout() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // GSAP Animation for Sidebar and Header
     if (sidebarRef.current) {
       gsap.fromTo(
         sidebarRef.current,
@@ -37,8 +36,6 @@ export default function Layout() {
       );
     }
   }, []);
-
-  // Animate page transitions on pathname change
   useEffect(() => {
     const pageContent = document.querySelector(".page-content");
     if (pageContent) {

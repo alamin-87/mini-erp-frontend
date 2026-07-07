@@ -34,7 +34,7 @@ export default function LoginPage() {
         rightPanelRef.current,
         { x: 50, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
-        "-=0.6" // start earlier
+        "-=0.6"
       );
       
       const elements = rightPanelRef.current.querySelectorAll('.stagger-elem');
@@ -55,8 +55,6 @@ export default function LoginPage() {
     try {
       const auth = await authApi.login({ email, password });
       setAuth(auth);
-      
-      // Exit animation
       if (containerRef.current) {
         gsap.to(containerRef.current, {
           scale: 0.95,
@@ -71,8 +69,6 @@ export default function LoginPage() {
     } catch {
       setError("Invalid credentials. Please try again.");
       setLoading(false);
-      
-      // Shake animation on error
       if (rightPanelRef.current) {
         gsap.fromTo(rightPanelRef.current, 
           { x: -10 }, 

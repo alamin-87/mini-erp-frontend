@@ -48,7 +48,7 @@ export default function DashboardPage() {
     <div className="space-y-8" ref={containerRef}>
       <div className="stagger-animate mb-8">
         <h2 className="text-4xl font-extrabold tracking-tight font-heading bg-gradient-to-r from-primary via-purple-500 to-foreground bg-clip-text text-transparent inline-block">
-          Welcome back, {user?.name?.split(' ')[0] || 'User'}! 👋
+          Welcome back, {user?.name?.split(' ')[0] || 'User'}!
         </h2>
         <p className="text-muted-foreground mt-2 text-lg font-medium">Here's your inventory and sales snapshot for today.</p>
       </div>

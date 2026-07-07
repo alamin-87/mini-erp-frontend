@@ -31,7 +31,7 @@ export default function RegisterPage() {
         rightPanelRef.current,
         { x: 50, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
-        "-=0.6" // start earlier
+        "-=0.6"
       );
       
       const elements = rightPanelRef.current.querySelectorAll('.stagger-elem');
@@ -53,8 +53,6 @@ export default function RegisterPage() {
       const response = await api.post("/auth/register", form);
       const auth = response.data.data;
       setAuth(auth);
-      
-      // Exit animation
       if (containerRef.current) {
         gsap.to(containerRef.current, {
           scale: 0.95,
@@ -69,8 +67,6 @@ export default function RegisterPage() {
     } catch {
       setError("Registration failed. Please try again.");
       setLoading(false);
-      
-      // Shake animation on error
       if (rightPanelRef.current) {
         gsap.fromTo(rightPanelRef.current, 
           { x: -10 }, 
